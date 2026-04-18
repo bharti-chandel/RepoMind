@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter", sans-serif;
+  --font-serif: "Plus Jakarta Sans", "Inter", sans-serif;
+  --color-background: #F7F7FB;
+  --color-paper: #F7F7FB;
+  --color-card: #FFFFFF;
+  --color-primary: #111111;
+  --color-ink: #111111;
+  --color-secondary: #6B7280;
+  --color-accent: #3B82F6;
+  --color-accent-start: #3B82F6;
+  --color-accent-mid: #10B981;
+  --color-accent-end: #8B5CF6;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-primary font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@utility glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-black/5 rounded-2xl shadow-sm;
+}
+
+@utility notebook-sidebar {
+  @apply bg-white/50 backdrop-blur-xl border-black/5;
+}
+
+@utility notebook-header {
+  @apply bg-white/70 backdrop-blur-xl border-b border-black/[0.03] sticky top-0 z-20;
+}
+
+@utility notebook-btn {
+  @apply px-5 py-2.5 rounded-xl font-medium transition-all duration-200 active:scale-[0.98] disabled:opacity-50;
+}
+
+@utility notebook-btn-primary {
+  @apply notebook-btn bg-primary text-white hover:bg-primary/90 shadow-sm;
+}
+
+@utility notebook-btn-secondary {
+  @apply notebook-btn bg-black/[0.03] text-primary hover:bg-black/[0.06];
+}
+
+@utility notebook-btn-ghost {
+  @apply notebook-btn bg-transparent text-secondary hover:bg-black/[0.03] hover:text-primary;
+}
+
+@utility gradient-text {
+  @apply bg-gradient-to-r from-accent-start via-accent-mid to-accent-end bg-clip-text text-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+.prose-report {
+  @apply text-primary/80 leading-relaxed max-w-none;
+}
+.prose-report h1 { @apply text-5xl font-serif font-bold mb-12 text-primary tracking-tight; }
+.prose-report h2 { @apply text-3xl font-serif font-bold mt-16 mb-8 text-primary border-b-2 border-black/5 pb-4 flex items-center gap-3; }
+.prose-report h2::before { content: ""; @apply w-2 h-8 bg-accent rounded-full; }
+.prose-report h3 { @apply text-xl font-bold mt-10 mb-6 text-primary flex items-center gap-2; }
+.prose-report h3::before { content: "→"; @apply text-accent font-mono; }
+.prose-report p { @apply mb-8 text-lg; }
+.prose-report ul { @apply list-none pl-0 mb-10 space-y-4; }
+.prose-report li { @apply pl-8 relative py-1; }
+.prose-report li::before { content: ""; @apply absolute left-0 top-3.5 w-2 h-2 bg-accent/30 rounded-full border border-accent; }
+.prose-report code { @apply bg-black/5 px-2 py-0.5 rounded text-accent font-mono text-sm border border-black/5; }
+.prose-report pre { @apply bg-[#1e1e1e] p-8 rounded-3xl my-10 overflow-x-auto border border-white/10 shadow-2xl; }
+.prose-report blockquote { @apply border-l-8 border-accent/20 bg-accent/[0.02] pl-8 py-6 rounded-r-2xl italic my-10 text-primary/70 text-xl font-serif; }
+.prose-report hr { @apply my-16 border-black/5; }
