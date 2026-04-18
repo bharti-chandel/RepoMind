@@ -1,11 +1,9 @@
 
-<<<<<<< HEAD
-=======
 <div align="center">
 <img width="1200" height="475" alt="RepoMind Banner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 
 # 🧠 RepoMind
-### *Transform Codebases into Interactive Intelligence.*
+### *Understand Your Codebase *
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -41,9 +39,6 @@ In today's fast-paced engineering world, **context is the ultimate bottleneck**.
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18+)
-- A Google Gemini API Key from [Google AI Studio](https://aistudio.google.com/)
 
 ### Installation
 
@@ -53,9 +48,9 @@ In today's fast-paced engineering world, **context is the ultimate bottleneck**.
     ```
 
 2.  **Environment Setup**:
-    Create a `.env` file in the root and add your API Key:
+    Create a `.env` file in the root and add your Gemini API Key:
     ```env
-    VITE_GEMINI_API_KEY=your_gemini_api_key_here
+    VITE_GEMINI_API_KEY=your_api_key_here
     ```
 
 3.  **Launch the App**:
@@ -75,4 +70,3 @@ In today's fast-paced engineering world, **context is the ultimate bottleneck**.
 <div align="center">
 Built for the next generation of software architects. 🚀
 </div>
->>>>>>> 977e1e0 (add readme file)
